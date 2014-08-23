@@ -1,0 +1,5 @@
+{
+    "hk2_binder": [
+        "com.englishtown.vertx.hk2.RecaptchaBinder"
+    ]
+}
