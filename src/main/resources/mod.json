@@ -1,0 +1,8 @@
+{
+    "main": "com.englishtown.vertx.recaptcha.RecaptchaVerticle",
+    "description": "Recaptcha as a service over the vert.x event bus",
+    "licenses": ["The MIT License"],
+    "author": "Englishtown",
+    "keywords": ["Recaptcha", "recaptcha", "anti-spam", "spam"],
+    "homepage": "https://github.com/englishtown/vertx-mod-recaptcha"
+}
