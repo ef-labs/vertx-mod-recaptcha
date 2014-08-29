@@ -15,7 +15,11 @@ import javax.inject.Inject;
  * vim ~/.bash_profile
  * export RECAPTCHA_PRIVATE_KEY=your_private_key_with_no_quotes
  *
- * and restarting your machine for it to take effect.
+ * You can then source that profile like so:
+ *
+ * source ~/.bash_profile
+ *
+ * or restart your machine for it to take effect.
  */
 public class EnvJsonRecaptchaConfigurator extends JsonRecaptchaConfigurator {
 

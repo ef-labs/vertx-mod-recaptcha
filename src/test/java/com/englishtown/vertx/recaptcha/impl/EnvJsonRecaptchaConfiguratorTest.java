@@ -48,7 +48,7 @@ public class EnvJsonRecaptchaConfiguratorTest {
         // expecting true if "ssl" parameter is set and also for the url to be https
         assertEquals(true, recaptchaConfigurator.getSsl());
         // should default to https://www.google.com/recaptcha/api/verify if no url or ssl is specified
-     //   assertEquals("https://www.google.com/recaptcha/api/verify", recaptchaConfigurator.getUrl());
+        assertEquals("https://www.google.com/recaptcha/api/verify", recaptchaConfigurator.getUrl().toString());
 
     }
 
@@ -64,7 +64,7 @@ public class EnvJsonRecaptchaConfiguratorTest {
         // expecting false is no "ssl" parameter is set
         assertEquals(false, recaptchaConfigurator.getSsl());
         // should default to http://www.google.com/recaptcha/api/verify if no url or ssl is specified
-   //     assertEquals("http://www.google.com/recaptcha/api/verify", recaptchaConfigurator.getUrl());
+        assertEquals("http://www.google.com/recaptcha/api/verify", recaptchaConfigurator.getUrl().toString());
 
     }
 
@@ -76,7 +76,7 @@ public class EnvJsonRecaptchaConfiguratorTest {
         assertEquals("et.recaptcha", recaptchaConfigurator2.getAddress());
         assertEquals("key", recaptchaConfigurator2.getPrivateKey());
         assertEquals(true, recaptchaConfigurator2.getSsl());
- //       assertEquals("https://www.google.com/recaptcha/api/verify", recaptchaConfigurator2.getUrl());
+        assertEquals("https://www.google.com/recaptcha/api/verify", recaptchaConfigurator2.getUrl().toString());
 
     }
 

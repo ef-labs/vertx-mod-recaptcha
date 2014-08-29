@@ -16,7 +16,7 @@ The configuration parameters are as follows:
 * `ssl` - Use the ssl HTTP address for Recaptcha. Defaults to false.
 * `url` - The URL for Recaptcha. Defaults to: [http://www.google.com/recaptcha/api/verify](http://www.google.com/recaptcha/api/verify)
 * `address` - The default Vert.x EventBus to use. Defaults to et.recaptcha.
-* `timeout` - The default timeout in ms to use when making the HTTP request to the Recaptcha service.
+* `timeout` - The default timeout in ms to use when making the HTTP request to the Recaptcha service. Defaults to 5000.
 
 An example configuration object could look like:
 
@@ -25,7 +25,7 @@ An example configuration object could look like:
 "ssl" : true,
 "url" : "http://www.google.com/recaptcha/api/verify",
 "address" : "et.recaptcha"
-"timeout" : 5000l
+"timeout" : 5000
 }
 ```
 

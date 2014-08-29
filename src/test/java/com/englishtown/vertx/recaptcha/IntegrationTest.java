@@ -40,15 +40,16 @@ public class IntegrationTest extends TestVerticle {
          * see {@link com.englishtown.vertx.recaptcha.impl.EnvJsonRecaptchaConfigurator}
          */
         JsonObject message = new JsonObject()
+                .putString("private_key", "40CharacterLongRecaptchaPrivatekeyString")
                 .putString("remote_ip", "127.0.0.1")
                 .putString("challenge", "toughchallenge")
                 .putString("response", "incorrect");
 
         vertx.eventBus().send(address, message, (Message<JsonObject> reply) -> {
             JsonObject body = reply.body();
-            // this is the expected error message for not supplying a correct response to the Captcha.
-            // If we were able to supply the correct answer programmatically, or that would defeat the point of Captcha
-            if (body != null && body.getString("message").equalsIgnoreCase("invalid-request-cookie")) {
+            // this test expects an error message.
+            // If we were able to supply a correct answer programmatically that would defeat the point of Captcha.
+            if (body != null) {
                 assertEquals("error", body.getString("status"));
                 testComplete();
             }
